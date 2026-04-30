@@ -1288,7 +1288,7 @@ Give a helpful, friendly quote estimate. Include:
 Keep it concise, warm, and professional. Use simple formatting with line breaks. Do not use markdown headers or bullet symbols — just clean readable text.`;
 
       try {
-        const response = await fetch('https://hidden-bird-aca4.service-a0e.workers.dev/', {
+        const response = await fetch('https://hidden-bird-aca4.service-a0e.workers.dev/', { 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
