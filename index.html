@@ -1387,6 +1387,7 @@ Keep it concise, warm, and professional. Use simple formatting with line breaks.
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            customerData: { name, phone, make, model, year, mileage, service, issue },
             model: 'claude-sonnet-4-5',
             max_tokens: 1000,
             messages: [{ role: 'user', content: prompt }]
