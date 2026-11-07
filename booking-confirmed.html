@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Redirect | CBSS Auto Services</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18531563597"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18531563597');
+  </script>
+
+  <style>
+    :root {
+      --navy: #0b1a2e;
+      --blue: #0d2245;
+      --accent: #0ea5e9;
+      --bright: #38bdf8;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #081827 0%, #0b1a2e 45%, #0d2245 100%);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .card {
+      max-width: 560px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 4px solid rgba(255,255,255,0.2);
+      border-top-color: var(--bright);
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1.25rem;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--accent), var(--bright));
+      text-decoration: none;
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner"></div>
+    <h1>Booking</h1>
+    <p>Redirecting you to our appointment scheduler. Please wait a moment.</p>
+    <a href="https://cbssautoservice.setmore.com">Continue to Setmore</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nextUrl = params.get('next') || 'https://cbssautoservice.setmore.com';
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18531563597/pz6jCNLR2LMdEM3wxIRF',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+
+    setTimeout(() => {
+      window.location.href = nextUrl;
+    }, 1200);
+  </script>
+</body>
+</html>
