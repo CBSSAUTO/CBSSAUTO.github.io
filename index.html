@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CBSS Auto Services | Chantilly, VA</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18531563597"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18531563597');
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1369,6 +1377,19 @@ The price was fair, and I felt confident in their recommendations—no upselling
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('open');
     }
+
+    const bookingLinks = document.querySelectorAll('a[href*="cbssautoservice.setmore.com"], a[href*="setmore.com"]');
+    bookingLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.gtag) {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18531563597/pz6jCNLR2LMdEM3wxIRF',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        }
+      }, { once: true });
+    });
 
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
