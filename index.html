@@ -1380,13 +1380,23 @@ The price was fair, and I felt confident in their recommendations—no upselling
 
     const bookingLinks = document.querySelectorAll('a[href*="cbssautoservice.setmore.com"], a[href*="setmore.com"]');
     bookingLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        if (window.gtag) {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-18531563597/pz6jCNLR2LMdEM3wxIRF',
-            'value': 1.0,
-            'currency': 'USD'
-          });
+      link.addEventListener('click', (event) => {
+        if (!window.gtag) return;
+
+        const destination = link.href;
+        const opensNewTab = link.target === '_blank';
+
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18531563597/pz6jCNLR2LMdEM3wxIRF',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+
+        if (!opensNewTab) {
+          event.preventDefault();
+          setTimeout(() => {
+            window.location.href = destination;
+          }, 250);
         }
       }, { once: true });
     });
