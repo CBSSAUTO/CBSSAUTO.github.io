@@ -807,7 +807,7 @@
       <li><a href="#quote">Get a Quote</a></li>
       <li><a href="#hours">Hours</a></li>
       <li><a href="#newsletter">Offers</a></li>
-      <li><a href="tel:7034665545" class="nav-cta">Call Us</a></li>
+      <li><a href="https://cbssautoservice.setmore.com" target="_blank" rel="noopener" class="nav-cta">Book Now</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -927,6 +927,11 @@
         <div class="service-name">Wipers, Bulbs & Accessories</div>
         <p class="service-desc">Windshield wiper replacement, headlight/taillight bulbs, and installation of various accessories.</p>
       </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🧾</div>
+        <div class="service-name">Pre-Purchase Inspection</div>
+        <p class="service-desc">Bring in a vehicle for a complete inspection so you can make a confident buying decision before committing to the purchase.</p>
+      </div>
     </div>
   </section>
 
@@ -987,6 +992,7 @@
             <option>Exhaust + Muffler</option>
             <option>Fluid Exchange Services</option>
             <option>Wipers, Bulbs & Accessories</option>
+            <option>Pre-Purchase Inspection</option>
             <option>Not sure — describe below</option>
           </select>
         </div>
@@ -1247,20 +1253,59 @@ The price was fair, and I felt confident in their recommendations—no upselling
     </div>
   </section>
 
-  <!-- EMAIL CAPTURE -->
-  <section id="newsletter" style="background: linear-gradient(135deg, var(--navy) 0%, #0d2245 100%); padding: 5rem 5%;">
-    <div style="max-width:650px; margin:0 auto; text-align:center;" class="reveal">
-      <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">Stay Connected</div>
-      <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:clamp(2rem,4vw,2.8rem); font-weight:800; text-transform:uppercase; color:white; line-height:1.1; margin-bottom:1rem;">Get Exclusive Deals &<br>Service Reminders</h2>
-      <p style="font-size:1rem; color:rgba(255,255,255,0.55); font-weight:300; line-height:1.7; margin-bottom:2rem;">Join our mailing list for seasonal promotions, maintenance tips, and priority booking offers — straight to your inbox.</p>
-      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;" id="emailCaptureForm">
-        <input type="text" id="capture-name" placeholder="Your Name" style="flex:1; min-width:160px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:0.8rem 1.1rem; color:white; font-family:'Barlow',sans-serif; font-size:0.92rem; outline:none;" />
-        <input type="email" id="capture-email" placeholder="Your Email Address" style="flex:2; min-width:220px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:0.8rem 1.1rem; color:white; font-family:'Barlow',sans-serif; font-size:0.92rem; outline:none;" />
-        <button onclick="submitEmail()" style="background:var(--accent); color:white; border:none; padding:0.8rem 1.8rem; border-radius:6px; font-family:'Barlow',sans-serif; font-weight:600; font-size:0.92rem; cursor:pointer; white-space:nowrap; transition:background 0.2s;">Subscribe ✉️</button>
+  <!-- OFFERS -->
+  <section id="newsletter" style="background: radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 32%), linear-gradient(135deg, #071827 0%, #0b1a2e 45%, #0d2245 100%); padding: 5rem 5%; position: relative; overflow: hidden;">
+    <div style="position:absolute; inset:0; background:linear-gradient(120deg, rgba(255,255,255,0.04), transparent 35%, rgba(56,189,248,0.06)); pointer-events:none;"></div>
+    <div style="max-width:1100px; margin:0 auto; position:relative; z-index:1;" class="reveal">
+      <div style="display:grid; grid-template-columns:1.25fr 0.75fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="display:inline-block; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.28); color:var(--bright); font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:0.7rem 1rem; border-radius:999px; margin-bottom:1rem;">Community Heroes Discount</div>
+          <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:clamp(3rem,5vw,5rem); font-weight:800; text-transform:uppercase; color:white; line-height:0.92; margin-bottom:0.6rem; letter-spacing:0.02em;">20% OFF<br>LABOR</h2>
+          <p style="font-size:1.2rem; color:rgba(255,255,255,0.9); font-weight:700; letter-spacing:0.04em; margin:0 0 0.4rem;">Save Up to $200.</p>
+          <p style="font-size:0.8rem; color:var(--bright); font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 1.25rem;">Valid through December 31st, 2026</p>
+          <p style="font-size:1.05rem; color:rgba(255,255,255,0.78); font-weight:400; line-height:1.7; margin-bottom:1.5rem; max-width:620px;">
+            Our way of saying thank you to those who serve, protect, and educate our communities.
+          </p>
+
+          <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.85rem; margin-bottom:2rem;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:1rem 0.75rem; text-align:center; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow: 0 12px 24px rgba(0,0,0,0.12);">
+              <div style="font-size:2.5rem; line-height:1; margin-bottom:0.5rem;">🚨</div>
+              <div style="font-weight:700; color:white; font-size:0.88rem; text-transform:uppercase; letter-spacing:0.05em;">First Responders</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:1rem 0.75rem; text-align:center; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow: 0 12px 24px rgba(0,0,0,0.12);">
+              <div style="font-size:2.5rem; line-height:1; margin-bottom:0.5rem;">🎓</div>
+              <div style="font-weight:700; color:white; font-size:0.88rem; text-transform:uppercase; letter-spacing:0.05em;">Teachers</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:1rem 0.75rem; text-align:center; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow: 0 12px 24px rgba(0,0,0,0.12);">
+              <div style="font-size:2.9rem; line-height:1; margin-bottom:0.45rem;">🎖️</div>
+              <div style="font-weight:700; color:white; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em;">Military</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+            <a href="https://cbssautoservice.setmore.com" target="_blank" rel="noopener" style="background:linear-gradient(135deg, var(--accent), var(--bright)); color:white; text-decoration:none; padding:1rem 1.8rem; border-radius:10px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; box-shadow: 0 16px 30px rgba(14,165,233,0.3);">Schedule Your Service</a>
+          </div>
+
+          <p style="font-size:0.98rem; color:rgba(255,255,255,0.78); line-height:1.7; margin:0; max-width:680px;">
+            No county, city, state, or residency restrictions. Eligible customers simply need to present a valid ID at the time of service.
+          </p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:22px; padding:2rem; box-shadow:0 20px 50px rgba(5,10,18,0.28);">
+          <div style="font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--bright); margin-bottom:1rem; font-weight:800;">Offer Terms</div>
+          <ul style="list-style:none; display:grid; gap:1rem; color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.7;">
+            <li style="display:flex; gap:0.8rem; align-items:flex-start;"><span style="color:var(--bright); font-size:1.2rem;">✓</span> Available to first responders, teachers, and military personnel with valid ID.</li>
+            <li style="display:flex; gap:0.8rem; align-items:flex-start;"><span style="color:var(--bright); font-size:1.2rem;">✓</span> No geographic restrictions.</li>
+            <li style="display:flex; gap:0.8rem; align-items:flex-start;"><span style="color:var(--bright); font-size:1.2rem;">✓</span> Discount applies to labor charges only; parts excluded. Maximum savings of $200.</li>
+            <li style="display:flex; gap:0.8rem; align-items:flex-start;"><span style="color:var(--bright); font-size:1.2rem;">✓</span> Offer valid through December 31st, 2026.</li>
+          </ul>
+        </div>
       </div>
-      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); margin-top:1rem;">No spam, ever. Unsubscribe anytime.</p>
-      <div id="emailSuccess" style="display:none; background:rgba(14,165,233,0.15); border:1px solid rgba(14,165,233,0.3); border-radius:8px; padding:1rem 1.5rem; margin-top:1.5rem; color:var(--bright); font-weight:500;">
-        ✅ Thanks for subscribing! We'll be in touch with exclusive offers.
+
+      <div style="margin-top:2.25rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.12);">
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.7; text-align:center; margin:0;">
+          Offer available to first responders, teachers, and military personnel with valid ID. No geographic restrictions. Discount applies to labor charges only; parts excluded. Maximum savings of $200. Offer valid through December 31st, 2026.
+        </p>
       </div>
     </div>
   </section>
